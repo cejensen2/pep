@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build-watch & npm run start-app",
-    "start-app": "nodemon ./server.js",
-    "build-watch": "webpack -w"
+    "start": "npm-run-all --parallel build-watch launch-app",
+    "build-watch": "webpack -w",
+    "launch-app": "nodemon ./server.js"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --write", "npm run lint-fix", "git add"],
-    "*.{css,scss,json,md}": ["prettier --write", "git add"]
+    "*.{js,jsx}": [
+      "prettier --write",
+      "npm run lint-fix",
+      "git add"
+    ],
+    "*.{css,scss,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
