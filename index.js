@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const PORT = 3000;
+const PORT = 3500;
 const app = express();
 
 module.exports = app;

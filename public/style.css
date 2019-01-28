@@ -1,5 +1,26 @@
-table,
-tr,
+table {
+  border-collapse: collapse;
+}
+
 td {
+  width: 30px;
+  height: 30px;
   border: 1px solid black;
+  text-align: center;
+}
+
+td[team='1'] {
+  color: darkblue;
+}
+
+td[team='2'] {
+  color: darkred;
+}
+
+td[reachable='true'] {
+  background-color: green;
+}
+
+td[attackable='true'] {
+  background-color: red;
 }
